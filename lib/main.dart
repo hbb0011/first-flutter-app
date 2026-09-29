@@ -75,19 +75,29 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        
         child: Column(
-          
-          mainAxisAlignment: .center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            const CircleAvatar(
+              backgroundColor: Color.fromARGB(255, 230, 228, 103),
+              radius: 50,
+              child: Icon(Icons.girl, size: 50),
             ),
+            const SizedBox(height: 16),
+            const Text(
+              'Hiba Allah Manai', 
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Text('DSI'), // Remplacez par votre spécialité
+            const SizedBox(height: 8),
+            const Text('manaihiba788@exemple.com'), 
+            const SizedBox(height: 24),
+            Text('Compteur : $_counter'),
           ],
         ),
       ),
+
       floatingActionButton: Row(
         mainAxisAlignment: .end,
         children: [
