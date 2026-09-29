@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp( //materialapp is the main widget that wraps other widgets and provides their design and structure
-      title: 'Flutter first app',
+      title: 'My first Project Hiba allah manai',
       theme: ThemeData(
         
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 9, 78, 120)),
       ),
       home: const MyHomePage(title: 'HELLO'),
     );
@@ -43,6 +43,25 @@ class _MyHomePageState extends State<MyHomePage> {
       //setstate is a method updates the state of the variable that changes while the app is running calling the build method 
       _counter++;
     });
+  }
+
+  void _decrementer(){
+    setState((){
+      if(_counter>0){
+        _counter--;
+
+      }
+    }
+    );
+  }
+
+  void _resetCounter(){
+    setState((){
+      if(_counter != 0){
+        _counter = 0;
+      }
+    });
+
   }
 
   @override
@@ -69,10 +88,31 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      floatingActionButton: Row(
+        mainAxisAlignment: .end,
+        children: [
+          FloatingActionButton(
+            heroTag: 'incre',
+            onPressed: _incrementCounter,
+            tooltip: 'Increment',
+            child: const Icon(Icons.add)
+          ),
+
+          FloatingActionButton(
+            heroTag: 'decre',
+            onPressed: _decrementer,
+            tooltip: 'Decrementer',
+            child: const Icon(Icons.remove),
+          ),
+
+          FloatingActionButton(
+            heroTag: 'reset',
+            onPressed: _resetCounter,
+            tooltip: 'Reset',
+            child: const Icon(Icons.refresh),
+          )
+          ]
+        
       ),
     );
   }
