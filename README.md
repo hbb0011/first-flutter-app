@@ -17,3 +17,17 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+//palier1 result:
+![alt text](image.png)
+
+//palier2 result:
+![alt text](image-1.png)
+
+//palier3 result:
+![alt text](image-2.png)
+
+//palier4 result:
+![alt text](image-3.png)
+
+//palier5 result:
+![alt text](image-4.png)
